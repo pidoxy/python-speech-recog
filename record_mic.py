@@ -6,14 +6,14 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 16000
 
-p = pyaudio.pyAudio()
+p = pyaudio.PyAudio()
 
 stream = p.open(
     format = FORMAT,
     channels = CHANNELS,
     rate=RATE,
     input=True,
-    FRAMES_PRE_BUFFER = FRAMES_PER_BUFFER
+    frames_per_buffer = FRAMES_PER_BUFFER
 )
 
 print("start recording")
